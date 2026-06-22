@@ -1,0 +1,467 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Vania &amp; Pandu Wedding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Montserrat:wght@300;400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#ffd2c9",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f5f0e6",
+                    "on-secondary-fixed-variant": "#374d28",
+                    "on-surface-variant": "#55423f",
+                    "inverse-surface": "#32302a",
+                    "sage-deep": "#627950",
+                    "secondary-fixed": "#d1ebb9",
+                    "surface-container-highest": "#e7e2d8",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#0d2002",
+                    "on-primary-fixed": "#3f0300",
+                    "outline-variant": "#dbc1bc",
+                    "surface-container-lowest": "#ffffff",
+                    "sage-soft": "#90A67E",
+                    "surface-variant": "#e7e2d8",
+                    "on-tertiary-fixed-variant": "#693b1e",
+                    "surface-dim": "#dedad0",
+                    "on-primary-fixed-variant": "#7b2e20",
+                    "outline": "#88726e",
+                    "on-tertiary-fixed": "#321200",
+                    "paper-background": "#FFFAF0",
+                    "secondary": "#4f653e",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "terracotta-deep": "#9C4737",
+                    "on-secondary-container": "#546b43",
+                    "tertiary-fixed-dim": "#fab892",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#875535",
+                    "on-surface": "#1d1c16",
+                    "surface-container-high": "#ece8de",
+                    "on-background": "#1d1c16",
+                    "primary-fixed": "#ffdad3",
+                    "primary-fixed-dim": "#ffb4a6",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#ffdbc9",
+                    "surface": "#fef9ef",
+                    "tertiary": "#6c3e20",
+                    "surface-tint": "#994535",
+                    "primary-container": "#9c4737",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#fef9ef",
+                    "surface-container": "#f2ede4",
+                    "on-tertiary-container": "#ffd4bc",
+                    "inverse-primary": "#ffb4a6",
+                    "background": "#fef9ef",
+                    "secondary-fixed-dim": "#b5ce9f",
+                    "secondary-container": "#d1ebb9",
+                    "surface-container-low": "#f8f3e9",
+                    "primary": "#7e3022",
+                    "gold-leaf": "#C08562"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "section-gap": "120px",
+                    "container-max": "1140px",
+                    "margin-mobile": "20px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Playfair Display"],
+                    "body-md": ["Montserrat"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "label-caps": ["Montserrat"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "52px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "body-xl": ["28px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .botanical-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+        .page-fade-in {
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .vellum-overlay {
+            background-color: rgba(255, 250, 240, 0.9);
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="bg-paper-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar (Shared Component Pattern) -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 border-b border-outline-variant transition-all duration-300" id="top-nav">
+<div class="max-w-container-max mx-auto flex justify-between items-center px-gutter py-4">
+<span class="font-display-lg text-headline-md text-primary">Vania &amp; Pandu</span>
+<div class="hidden md:flex space-x-8 items-center">
+
+<!-- <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Events</a> -->
+
+<!-- <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">RSVP</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Registry</a> -->
+</div>
+<a href="#rsvp" class="bg-terracotta-deep text-white px-6 py-2 rounded-full font-label-caps text-label-caps hover:scale-105 active:scale-95 transition-all">17 Agustus 2026</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+<!-- Asymmetric Botanical Accents -->
+<div class="absolute -left-20 bottom-0 w-1/3 max-w-[400px] pointer-events-none botanical-float opacity-80 md:opacity-100 z-10">
+<img alt="Botanical Illustration" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLsfZc-wK0mH17WOcw6qzjvBx0e9QV3S6vP9ka15aL3AlKUNFJvJ19azpZ-XqlS7hPAkNI9xB972QVETtrpJ8PiLHzUHVyGYJ0qj8zPMZ26eLBP8VkYYzyXtD93Vvb6Zxzdy06rS26LOI-UUg00ZWwhJ8OR8eJpNG0Jl09VrwkhoSnfWSik12ISACtHvGM0yQBhA7qqs8u7DhXX9Z8l5YB4EtMlA1CSs7_9dVVtlXh5-fbBjv8Gz5IC3YJj7">
+</div>
+<div class="absolute -right-20 top-20 w-1/3 max-w-[400px] pointer-events-none botanical-float opacity-80 md:opacity-100 z-10" style="animation-delay: -3s;">
+<img alt="Botanical Illustration" class="w-full h-auto transform scale-x-[-1] rotate-12" src="https://lh3.googleusercontent.com/aida/AP1WRLsfZc-wK0mH17WOcw6qzjvBx0e9QV3S6vP9ka15aL3AlKUNFJvJ19azpZ-XqlS7hPAkNI9xB972QVETtrpJ8PiLHzUHVyGYJ0qj8zPMZ26eLBP8VkYYzyXtD93Vvb6Zxzdy06rS26LOI-UUg00ZWwhJ8OR8eJpNG0Jl09VrwkhoSnfWSik12ISACtHvGM0yQBhA7qqs8u7DhXX9Z8l5YB4EtMlA1CSs7_9dVVtlXh5-fbBjv8Gz5IC3YJj7">
+</div>
+<div class="relative z-20 text-center max-w-container-max px-gutter page-fade-in">
+<p class="font-body-lg text-body-xl text-on-surface-variant leading-relaxed text-primary mb-6 max-w-[720px]">Dengan segala kerendahan hati, kami bermaksud mengundang Bapak/Ibu/Saudara/i dalam acara resepsi perrnikahan anak kami.</p>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 leading-tight">
+                Vania <span class="text-gold-leaf">&amp;</span> Pandu
+            </h1>
+<div class="w-16 h-px bg-gold-leaf mx-auto mb-6"></div>
+<p class="font-headline-md text-headline-md text-on-surface-variant mb-8 italic">Senin, 17 Agustus 2026</p>
+<p class="font-label-caps text-label-caps text-sage-deep tracking-[0.3em] uppercase">#vaniapandu</p>
+<div class="mt-16 animate-bounce opacity-50">
+<span class="material-symbols-outlined text-4xl text-primary">expand_more</span>
+</div>
+</div>
+</header>
+<!-- Welcome Intro Section -->
+<!-- <section class="py-section-gap relative">
+<div class="max-w-[700px] mx-auto text-center px-margin-mobile">
+<span class="material-symbols-outlined text-gold-leaf text-4xl mb-8">favorite</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                Dengan segala kerendahan hati, kami bermaksud mengundang Bapak/Ibu/Saudara/i dalam acara resepsi perrnikahan anak kami.
+            </p>
+</div>
+</section> -->
+<!-- Countdown Section -->
+<section class="py-section-gap bg-surface-container-low border-y border-sage-soft/20">
+<div class="max-w-container-max mx-auto px-gutter">
+<h2 class="font-headline-md text-headline-md text-center text-primary mb-12">Menghitung Hari Menuju Bahagia</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-[800px] mx-auto" id="countdown">
+<div class="bg-white p-8 border border-sage-soft/30 text-center rounded-lg">
+<span class="block font-display-lg text-headline-lg text-terracotta-deep" id="days">55</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Hari</span>
+</div>
+<div class="bg-white p-8 border border-sage-soft/30 text-center rounded-lg">
+<span class="block font-display-lg text-headline-lg text-terracotta-deep" id="hours">18</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Jam</span>
+</div>
+<div class="bg-white p-8 border border-sage-soft/30 text-center rounded-lg">
+<span class="block font-display-lg text-headline-lg text-terracotta-deep" id="minutes">41</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Menit</span>
+</div>
+<div class="bg-white p-8 border border-sage-soft/30 text-center rounded-lg">
+<span class="block font-display-lg text-headline-lg text-terracotta-deep" id="seconds">28</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Detik</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Venue Section -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="relative order-2 md:order-1">
+<div class="aspect-[0.99] rounded-lg overflow-hidden border border-sage-soft/30 p-2 bg-white rotate-[-2deg] transition-transform hover:rotate-0 duration-500">
+<img alt="The Venue" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvC1a9LEI2TtFSQKknBCHCViCVKUGyto0qwoOiaYoDKQD_cygsE7vk_KQE9m_Rscuqajb9uuzwcDPtyPhxvrYIZUt1oLyKUf6JUjvJ4KDxlTcQOUQs7sm2m9FUG06ToWY48RPwLK0XQ5eHlAq1PKCZVSFbG4wXuB0Lx-E8ctY-XvCoWkUaUQE7JN5IM2k-DiM7GhNyKbfrtz2_XpqvyYGAYUcE-MskpOtR94MVlMQxv2VBPro5g0W5ClPif">
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-8 -right-8 w-32 h-32 opacity-20">
+<img alt="Botanical Pattern" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsfZc-wK0mH17WOcw6qzjvBx0e9QV3S6vP9ka15aL3AlKUNFJvJ19azpZ-XqlS7hPAkNI9xB972QVETtrpJ8PiLHzUHVyGYJ0qj8zPMZ26eLBP8VkYYzyXtD93Vvb6Zxzdy06rS26LOI-UUg00ZWwhJ8OR8eJpNG0Jl09VrwkhoSnfWSik12ISACtHvGM0yQBhA7qqs8u7DhXX9Z8l5YB4EtMlA1CSs7_9dVVtlXh5-fbBjv8Gz5IC3YJj7">
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-8">
+<div>
+<span class="font-label-caps text-label-caps text-gold-leaf tracking-widest uppercase block mb-4">The Venue</span>
+<h2 class="font-display-lg text-headline-lg text-primary mb-6">Holy Matrimony</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Pemberkatan Pernikahan Kudus akan dilangsungkan pada pukul 11.00 WITA, dalam suasana hangat yang dikelilingi keindahan alam dan orang-orang yang kami kasihi.
+                        </p>
+</div>
+<div class="space-y-4 mb-3">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-terracotta-deep">location_on</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface font-bold">Gereja Katolik Santa Maria Ratu Rosari</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Jl. Mulawarman No. 92A, Gianyar, Bali.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-terracotta-deep">calendar_today</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface font-bold">17 Agustus 2026</p>
+<p class="font-body-md text-body-md text-on-surface-variant">11:00 AM WITA.</p>
+</div>
+</div>
+</div>
+<div >
+<a href="https://maps.app.goo.gl/3P7nSRgbBT8xWisX6" target="_blank" class="border border-gold-leaf text-gold-leaf px-8 py-3 font-label-caps text-label-caps hover:bg-gold-leaf hover:text-white transition-all duration-300">
+                        Open Maps
+                    </a>
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured reception Section -->
+<section class="py-section-gap bg-surface-container-low border-y border-sage-soft/20">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="relative order-2 md:order-1">
+<div class="aspect-[0.99] rounded-lg overflow-hidden border border-sage-soft/30 p-2 bg-white rotate-[-2deg] transition-transform hover:rotate-0 duration-500">
+<img alt="The Venue" class="w-full h-full object-cover" src="https://jeevaresorts.com/saba/wp-content/uploads/sites/5/2022/05/saba-view-4.jpg">
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-8 -right-8 w-32 h-32 opacity-20">
+<img alt="Botanical Pattern" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsfZc-wK0mH17WOcw6qzjvBx0e9QV3S6vP9ka15aL3AlKUNFJvJ19azpZ-XqlS7hPAkNI9xB972QVETtrpJ8PiLHzUHVyGYJ0qj8zPMZ26eLBP8VkYYzyXtD93Vvb6Zxzdy06rS26LOI-UUg00ZWwhJ8OR8eJpNG0Jl09VrwkhoSnfWSik12ISACtHvGM0yQBhA7qqs8u7DhXX9Z8l5YB4EtMlA1CSs7_9dVVtlXh5-fbBjv8Gz5IC3YJj7">
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-8">
+<div>
+<span class="font-label-caps text-label-caps text-gold-leaf tracking-widest uppercase block mb-4">The Venue Wedding</span>
+<h2 class="font-display-lg text-headline-lg text-primary mb-6">Wedding Reception</h2>
+
+</div>
+<div class="space-y-4 mb-3">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-terracotta-deep">location_on</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface font-bold">Jeeva Saba</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Jl. Pura Anyar II No. 8 Saba, Blahbatuh, Gianyar, Bali.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-terracotta-deep">calendar_today</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface font-bold">17 Agustus 2026</p>
+<p class="font-body-md text-body-md text-on-surface-variant">05:30 PM WITA.</p>
+</div>
+</div>
+</div>
+<div >
+<a href="https://maps.app.goo.gl/ZAr5ao9AtW5vKSmZ9" target="_blank" class="border border-gold-leaf text-gold-leaf px-8 py-3 font-label-caps text-label-caps hover:bg-gold-leaf hover:text-white transition-all duration-300">
+                        Open Maps
+                    </a>
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<section id="rsvp" class="py-section-gap ">
+    <div class="max-w-container-max mx-auto flex flex-col items-center justify-center text-center px-margin-mobile space-y-6">
+       <h2 class="font-display-lg text-headline-lg text-primary mb-6">Mohon untuk mengisi RSVP untuk kehadiran di lokasi.</h2>
+        <form id="rsvpForm">
+
+    <div class="mb-3">
+        <input
+            type="text"
+            class="form-control"
+            name="nama"
+            id="nama"
+            placeholder="Nama Lengkap"
+            required>
+    </div>
+
+    <div class="mb-3">
+        <select
+            class="form-select"
+            id="kehadiran"
+            required>
+
+            <option value="">Pilih Kehadiran</option>
+            <option value="Hadir">Hadir</option>
+            <option value="Tidak Hadir">Tidak Hadir</option>
+
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <select
+            class="form-select"
+            id="jumlah"
+            required>
+
+            <option value="">Jumlah Tamu</option>
+            <option value="1">1 Orang</option>
+            <option value="2">2 Orang</option>
+
+        </select>
+    </div>
+
+    <button
+        type="submit"
+        class="bg-terracotta-deep text-white px-6 py-2 rounded-full font-label-caps text-label-caps hover:scale-105 active:scale-95 transition-all">
+        Kirim RSVP
+    </button>
+
+</form>
+
+<div id="result" class="mt-3"></div>
+    </div>
+</section>
+<!-- Footer (Shared Component Pattern) -->
+<footer class="py-section-gap">
+    
+<div class="max-w-container-max mx-auto flex flex-col items-center justify-center text-center">
+    <h2 class="font-display-lg text-headline-lg text-primary mb-6">Kami Yang Berbahagia</h2>
+    <h3 class="font-display-lg text-headline-md text-primary ">Radix Siswo Purwono</h3>
+    <h3 class="font-display-lg text-headline-md text-primary ">Dewi Siswo</h3>
+    <h3>&nbsp;</h3>
+    <h3 class="font-display-lg text-headline-md text-primary">I Nyoman Ngurah Suryadiputra</h3>
+    <h3 class="font-display-lg text-headline-md text-primary mb-6 ">Wendy Suryadiputra</h3>
+
+<div class="flex space-x-6">
+    <p class="font-body-md text-body-md text-sage-deep">© 2026 Vania &amp; Pandu</p>
+    
+<!-- <a class="text-on-surface-variant hover:text-gold-leaf transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-gold-leaf transition-colors duration-300" href="#">Contact Us</a> -->
+</div>
+<div class="w-12 h-px bg-outline-variant"></div>
+<a class="text-on-surface-variant hover:text-gold-leaf transition-colors duration-300" href="#">17 Agustus 2026</a>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-terracotta-deep opacity-60">local_florist</span>
+<span class="material-symbols-outlined text-terracotta-deep opacity-60">celebration</span>
+<span class="material-symbols-outlined text-terracotta-deep opacity-60">church</span>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Countdown Logic
+        const targetDate = new Date("Aug 17, 2026 12:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "<p class='font-headline-md text-primary text-center col-span-4'>Today is the Big Day!</p>";
+            }
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('top-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md', 'py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('shadow-md', 'py-2');
+                nav.classList.add('py-4');
+            }
+        });
+    </script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const params = new URLSearchParams(window.location.search);
+
+    const nama = params.get("nama");
+
+    if (nama) {
+        document.getElementById("nama").value = nama;
+    }
+
+});
+
+</script>
+
+<script>
+
+const SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbzNKWOsURfsJ-wMM64gIaxuTMigP0Z3q7VCccit_umHJGayFhUoYDYUqyWvW7O_gxJH5g/exec";
+document
+.getElementById("rsvpForm")
+.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const data = {
+        nama: document.getElementById("nama").value,
+        kehadiran: document.getElementById("kehadiran").value,
+        jumlah: document.getElementById("jumlah").value
+    };
+
+    try {
+
+        await fetch(
+            SCRIPT_URL,
+            {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            }
+        );
+
+        alert("RSVP berhasil dikirim");
+
+        this.reset();
+
+    } catch(err) {
+
+        alert(err.message);
+
+    }
+
+});
+
+</script>
+
+</body></html>
