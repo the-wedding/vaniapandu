@@ -104,6 +104,20 @@
       }
     </script>
 <style>
+        html, body {
+            -webkit-overflow-scrolling: touch;
+        }
+        body {
+            overscroll-behavior-y: none;
+        }
+        #top-nav {
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transform: translateZ(0);
+            will-change: transform;
+        }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
@@ -129,7 +143,7 @@
 </head>
 <body class="bg-paper-background text-on-surface font-body-md overflow-x-hidden">
 <!-- Top Navigation Bar (Shared Component Pattern) -->
-<nav class="fixed top-0 w-full z-50 bg-surface/90 border-b border-outline-variant transition-all duration-300" id="top-nav">
+<nav class="sticky top-0 w-full z-50 bg-surface/90 border-b border-outline-variant transition-all duration-300" id="top-nav">
 <div class="max-w-container-max mx-auto flex justify-between items-center px-gutter py-4">
 <span class="font-display-lg text-headline-md text-primary">Vania &amp; Pandu</span>
 <div class="hidden md:flex space-x-8 items-center">
@@ -143,13 +157,13 @@
 </div>
 </nav>
 <!-- Hero Section -->
-<header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+<header class="relative min-h-screen flex items-center justify-center overflow-hidden">
 <!-- Asymmetric Botanical Accents -->
 <div class="absolute -left-20 bottom-0 w-1/3 max-w-[400px] pointer-events-none botanical-float opacity-80 md:opacity-100 z-10">
-<img alt="Botanical Illustration" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLsfZc-wK0mH17WOcw6qzjvBx0e9QV3S6vP9ka15aL3AlKUNFJvJ19azpZ-XqlS7hPAkNI9xB972QVETtrpJ8PiLHzUHVyGYJ0qj8zPMZ26eLBP8VkYYzyXtD93Vvb6Zxzdy06rS26LOI-UUg00ZWwhJ8OR8eJpNG0Jl09VrwkhoSnfWSik12ISACtHvGM0yQBhA7qqs8u7DhXX9Z8l5YB4EtMlA1CSs7_9dVVtlXh5-fbBjv8Gz5IC3YJj7">
+<img alt="Botanical Illustration" class="w-full h-auto" src="/bunga.png">
 </div>
 <div class="absolute -right-20 top-20 w-1/3 max-w-[400px] pointer-events-none botanical-float opacity-80 md:opacity-100 z-10" style="animation-delay: -3s;">
-<img alt="Botanical Illustration" class="w-full h-auto transform scale-x-[-1] rotate-12" src="https://lh3.googleusercontent.com/aida/AP1WRLsfZc-wK0mH17WOcw6qzjvBx0e9QV3S6vP9ka15aL3AlKUNFJvJ19azpZ-XqlS7hPAkNI9xB972QVETtrpJ8PiLHzUHVyGYJ0qj8zPMZ26eLBP8VkYYzyXtD93Vvb6Zxzdy06rS26LOI-UUg00ZWwhJ8OR8eJpNG0Jl09VrwkhoSnfWSik12ISACtHvGM0yQBhA7qqs8u7DhXX9Z8l5YB4EtMlA1CSs7_9dVVtlXh5-fbBjv8Gz5IC3YJj7">
+<img alt="Botanical Illustration" class="w-full h-auto transform scale-x-[-1] rotate-12" src="/bunga.png">
 </div>
 <div class="relative z-20 text-center max-w-container-max px-gutter page-fade-in">
 <p class="font-body-lg text-body-xl text-on-surface-variant leading-relaxed text-primary mb-6 max-w-[720px]">Dengan segala kerendahan hati, kami bermaksud mengundang Bapak/Ibu/Saudara/i dalam acara resepsi pernikahan anak kami.</p>
@@ -207,7 +221,7 @@
 </div>
 <!-- Decorative Element -->
 <div class="absolute -bottom-8 -right-8 w-32 h-32 opacity-20">
-<img alt="Botanical Pattern" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsfZc-wK0mH17WOcw6qzjvBx0e9QV3S6vP9ka15aL3AlKUNFJvJ19azpZ-XqlS7hPAkNI9xB972QVETtrpJ8PiLHzUHVyGYJ0qj8zPMZ26eLBP8VkYYzyXtD93Vvb6Zxzdy06rS26LOI-UUg00ZWwhJ8OR8eJpNG0Jl09VrwkhoSnfWSik12ISACtHvGM0yQBhA7qqs8u7DhXX9Z8l5YB4EtMlA1CSs7_9dVVtlXh5-fbBjv8Gz5IC3YJj7">
+<img alt="Botanical Pattern" class="w-full h-full object-contain" src="/bunga.png">
 </div>
 </div>
 <div class="order-1 md:order-2 space-y-8">
@@ -253,7 +267,7 @@
 </div>
 <!-- Decorative Element -->
 <div class="absolute -bottom-8 -right-8 w-32 h-32 opacity-20">
-<img alt="Botanical Pattern" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsfZc-wK0mH17WOcw6qzjvBx0e9QV3S6vP9ka15aL3AlKUNFJvJ19azpZ-XqlS7hPAkNI9xB972QVETtrpJ8PiLHzUHVyGYJ0qj8zPMZ26eLBP8VkYYzyXtD93Vvb6Zxzdy06rS26LOI-UUg00ZWwhJ8OR8eJpNG0Jl09VrwkhoSnfWSik12ISACtHvGM0yQBhA7qqs8u7DhXX9Z8l5YB4EtMlA1CSs7_9dVVtlXh5-fbBjv8Gz5IC3YJj7">
+<img alt="Botanical Pattern" class="w-full h-full object-contain" src="/bunga.png">
 </div>
 </div>
 <div class="order-1 md:order-2 space-y-8">
